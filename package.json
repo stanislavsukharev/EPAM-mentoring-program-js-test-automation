@@ -1,10 +1,12 @@
 {
   "name": "js-atm-program",
+  "type": "module",
   "version": "1.0.0",
   "description": "Automated Testing Mentoring with JS: Basic",
-  "main": "index.js",
+  "main": "numbers-validator.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "coverage": "c8 npm test"
   },
   "repository": {
     "type": "git",
@@ -12,5 +14,16 @@
   },
   "keywords": [],
   "author": "Stanislav_Sukharev@epam.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "dependencies": {
+    "c8": "^7.12.0",
+    "chai": "^4.3.6",
+    "husky": "^8.0.1",
+    "mocha": "^10.1.0",
+    "mochawesome": "^7.1.3"
+  }
 }
