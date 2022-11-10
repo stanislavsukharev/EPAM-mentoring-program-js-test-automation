@@ -1,12 +1,13 @@
 {
   "name": "js-atm-program",
-  "type": "module",
   "version": "1.0.0",
   "description": "Automated Testing Mentoring with JS: Basic",
   "main": "numbers-validator.js",
   "scripts": {
     "test": "mocha",
-    "coverage": "c8 npm test"
+    "coverage": "c8 npm test",
+    "lint": "eslint ./ --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
