@@ -1,3 +1,8 @@
+/* eslint-disable comma-dangle */
+/* eslint-disable valid-jsdoc */
+/* eslint-disable max-len */
+/* eslint-disable quotes */
+// eslint-disable-next-line require-jsdoc
 class NumbersValidator {
   /**
    * @param {Number} number number to check
@@ -6,8 +11,7 @@ class NumbersValidator {
   isNumberEven(number) {
     const typeOfVariable = typeof number;
     if (typeOfVariable !== "number") {
-      throw new Error(
-        `[${number}] is not of type "Number" it is of type "${typeOfVariable}"`
+      throw new Error(`[${number}] is not of type "Number" it is of type "${typeOfVariable}"`
       );
     } else {
       return number % 2 === 0;
@@ -41,6 +45,7 @@ class NumbersValidator {
 
   /**
    * Check if passed value is integer
+   // eslint-disable-next-line valid-jsdoc
    * @param n - value
    * @return {boolean} true if value is integer
    */
