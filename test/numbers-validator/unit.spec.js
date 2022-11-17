@@ -12,16 +12,16 @@ describe('isNumberEven', () => {
     expect(validator.isNumberEven(4)).to.be.equal(true);
   });
 
-  it('should return false when provided with a negative odd number', () => {
-    expect(validator.isNumberEven(-3)).to.be.equal(false);
+  it('should return false when provided with an odd number', () => {
+    expect(validator.isNumberEven(5)).to.be.equal(false);
   });
 
-  it('should return false when provided with an even negative number', () => {
+  it('should return true when provided with an even negative number', () => {
     expect(validator.isNumberEven(-10)).to.be.equal(true);
   });
 
-  it('should return false when provided with an odd number', () => {
-    expect(validator.isNumberEven(5)).to.be.equal(false);
+  it('should return false when provided with a negative odd number', () => {
+    expect(validator.isNumberEven(-3)).to.be.equal(false);
   });
 
   it('should throw an error when provided a string', () => {
@@ -48,7 +48,7 @@ describe('isNumberEven', () => {
     }).to.throw('[false] is not of type "Number" it is of type "boolean"');
   });
 
-  it('should throw an error when provided a undefined', () => {
+  it('should throw an error when provided an undefined', () => {
     expect(() => {
       validator.isNumberEven(undefined);
     }).to.throw('[undefined] is not of type "Number" it is of type "undefined"');
@@ -58,10 +58,6 @@ describe('isNumberEven', () => {
     expect(() => {
       validator.isNumberEven(1234567890123456789012345678901234567890n);
     }).to.throw('[1234567890123456789012345678901234567890] is not of type "Number" it is of type "bigint"');
-  });
-
-  it('should return false when provided with a floating number', () => {
-    expect(validator.isNumberEven(3)).to.be.equal(false);
   });
 });
 
@@ -107,7 +103,7 @@ describe('isAllNumbers', () => {
     validator = new NumbersValidator();
   });
 
-  it('should return true when provided with a number', () => {
+  it('should return true when provided with numbers', () => {
     const arrayOfNumbers = [4, 5, 19, 8];
     expect(validator.isAllNumbers(arrayOfNumbers)).to.equal(true);
   });
@@ -118,7 +114,7 @@ describe('isAllNumbers', () => {
   });
 
   it('should return false when provided with a string', () => {
-    const arrayOfNumbers = ['100', 'cat', 34, ''];
+    const arrayOfNumbers = ['100', 'cat', '34', ''];
     expect(validator.isAllNumbers(arrayOfNumbers)).to.equal(false);
   });
 
@@ -159,7 +155,7 @@ describe('isInteger', () => {
     expect(validator.isInteger(4)).to.be.equal(true);
   });
 
-  it('should return true when provided with an negative integer', () => {
+  it('should return true when provided with a negative integer', () => {
     expect(validator.isInteger(-50)).to.be.equal(true);
   });
 
