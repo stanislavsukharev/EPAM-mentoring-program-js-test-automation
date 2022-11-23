@@ -8,20 +8,16 @@ describe('isNumberEven', () => {
     validator = new NumbersValidator();
   });
 
-  it('should return true when provided with an even number', () => {
-    expect(validator.isNumberEven(4)).to.be.equal(true);
-  });
-
-  it('should return false when provided with an odd number', () => {
-    expect(validator.isNumberEven(5)).to.be.equal(false);
-  });
-
-  it('should return true when provided with an even negative number', () => {
-    expect(validator.isNumberEven(-10)).to.be.equal(true);
-  });
-
-  it('should return false when provided with a negative odd number', () => {
-    expect(validator.isNumberEven(-3)).to.be.equal(false);
+  const arr = [
+    [4, true],
+    [-10, true],
+    [5, false],
+    [-3, false],
+  ];
+  arr.forEach((el) => {
+    it(`should return true with an even number or false with an odd number -[${el[1]}]`, () => {
+      expect(validator.isNumberEven(el[0])).to.deep.equal(el[1]);
+    });
   });
 
   it('should throw an error when provided a string', () => {
@@ -42,12 +38,6 @@ describe('isNumberEven', () => {
     }).to.throw('[true] is not of type "Number" it is of type "boolean"');
   });
 
-  it('should throw an error when provided a boolean', () => {
-    expect(() => {
-      validator.isNumberEven(false);
-    }).to.throw('[false] is not of type "Number" it is of type "boolean"');
-  });
-
   it('should throw an error when provided an undefined', () => {
     expect(() => {
       validator.isNumberEven(undefined);
@@ -61,38 +51,32 @@ describe('isNumberEven', () => {
   });
 });
 
-describe('getEvenNumbersFromArray', function() {
+describe('getEvenNumbersFromArray', () => {
   let validator;
 
   beforeEach(function() {
     validator = new NumbersValidator();
   });
 
-  it('should return an array of even numbers when provided with proper data', function() {
-    const arrayOfRandomNumbers = [2, 7, 12, 17, 1, 55, 32, 10];
-    expect(validator.getEvenNumbersFromArray(arrayOfRandomNumbers)).to.be.eql([
-      2, 12, 32, 10,
-    ]);
+  const arr = [
+    [[2, 7, -12, 0, 1, -55, 32, 10], [2, -12, 0, 32, 10]],
+    [[160, 13, -8, 1], [160, -8]],
+  ];
+  arr.forEach((el) => {
+    it(`should return an array of even numbers - [${el[1]}]`, () => {
+      expect(validator.getEvenNumbersFromArray(el[0])).to.deep.equal(el[1]);
+    });
   });
 
   it('should throw an error when an array is not an array of numbers', () => {
-    const arrayOfRandomNumbers = [2, 7, 12, '17', 1, 55, 32, 10];
     expect(() => {
-      validator.getEvenNumbersFromArray(arrayOfRandomNumbers);
-    }).to.throw('[2,7,12,17,1,55,32,10] is not an array of "Numbers"');
+      validator.getEvenNumbersFromArray([-12, 11, 'cat', null]);
+    }).to.throw('[-12,11,cat,] is not an array of "Numbers"');
   });
 
   it('should throw an error when an array is not an array of numbers', () => {
-    const arrayOfRandomNumbers = ['24', 'eleven', 'cat', null];
     expect(() => {
-      validator.getEvenNumbersFromArray(arrayOfRandomNumbers);
-    }).to.throw('[24,eleven,cat,] is not an array of "Numbers"');
-  });
-
-  it('should throw an error when an array is not an array of numbers', () => {
-    const arrayOfRandomNumbers = [1234567890123456789012345678901234567890n, false, undefined];
-    expect(() => {
-      validator.getEvenNumbersFromArray(arrayOfRandomNumbers);
+      validator.getEvenNumbersFromArray([1234567890123456789012345678901234567890n, false, undefined]);
     }).to.throw('[1234567890123456789012345678901234567890,false,] is not an array of "Numbers"');
   });
 });
@@ -103,44 +87,38 @@ describe('isAllNumbers', () => {
     validator = new NumbersValidator();
   });
 
+  const arr = [
+    [[-1, 12, Infinity, undefined, null, undefined], false],
+    [['100', 'cat', '34', ''], false],
+    [[4, 5, -19, 8, -43, 100], true],
+
+  ];
+  arr.forEach((el) => {
+    it(`should return true with an array of numbers or false when an array is not an array of numbers - [${el[1]}]`, () => {
+      expect(validator.isAllNumbers(el[0])).to.deep.equal(el[1]);
+    });
+  });
+
   it('should return true when provided with numbers', () => {
-    const arrayOfNumbers = [4, 5, 19, 8];
+    const arrayOfNumbers = [4, 5, -19, 8, -43, 100];
     expect(validator.isAllNumbers(arrayOfNumbers)).to.equal(true);
-  });
-
-  it('should return true when provided with a negative number', () => {
-    const arrayOfNumbers = [-100, -43, -54, -18];
-    expect(validator.isAllNumbers(arrayOfNumbers)).to.equal(true);
-  });
-
-  it('should return false when provided with a string', () => {
-    const arrayOfNumbers = ['100', 'cat', '34', ''];
-    expect(validator.isAllNumbers(arrayOfNumbers)).to.equal(false);
-  });
-
-  it('should return false when provided data not numbers', () => {
-    const arrayOfNumbers = [null, true, Infinity, undefined];
-    expect(validator.isAllNumbers(arrayOfNumbers)).to.equal(false);
   });
 
   it('should return false when provided not an array', () => {
-    const arrayOfNumbers = 1;
     expect(() => {
-      validator.isAllNumbers(arrayOfNumbers);
+      validator.isAllNumbers(1);
     }).to.throw('[1] is not an array');
   });
 
   it('should return false when provided not an array', () => {
-    const arrayOfNumbers = true;
     expect(() => {
-      validator.isAllNumbers(arrayOfNumbers);
+      validator.isAllNumbers(true);
     }).to.throw('[true] is not an array');
   });
 
   it('should return false when provided not an array', () => {
-    const arrayOfNumbers = {type: 'Fiat'};
     expect(() => {
-      validator.isAllNumbers(arrayOfNumbers);
+      validator.isAllNumbers({type: 'Fiat'});
     }).to.throw('[[object Object]] is not an array');
   });
 });
@@ -151,12 +129,15 @@ describe('isInteger', () => {
     validator = new NumbersValidator();
   });
 
-  it('should return true when provided with an integer', () => {
-    expect(validator.isInteger(4)).to.be.equal(true);
-  });
-
-  it('should return true when provided with a negative integer', () => {
-    expect(validator.isInteger(-50)).to.be.equal(true);
+  const arr = [
+    [7, true],
+    [-50, true],
+    [0, true],
+  ];
+  arr.forEach((el) => {
+    it(`should return true when provided with an integer - [${el[0]}]`, () => {
+      expect(validator.isInteger(el[0])).to.deep.equal(el[1]);
+    });
   });
 
   it('should throw an error when provided data not a number', () => {
