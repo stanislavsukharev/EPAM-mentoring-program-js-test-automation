@@ -44,15 +44,12 @@ describe('Calendar appointment test', () => {
     const appointment = await $('[data-date="1596340800000"]');
     const inputPatientName = await $("//input[@id='PatientName']");
     const symptomField = await $("//textarea[@name='Symptoms']");
-
-    // can not find the right selector:
-    const saveAppointmentButton = await $("//button[text()='Save']")
+    const saveAppointmentButton = await $(".e-event-save");
 
     await appointment.doubleClick();
     await inputPatientName.setValue('Milka'); 
     await symptomField.setValue('bipolar disorder');
     await saveAppointmentButton.click();
-
 
     const newAppointmentValidation = await $('[aria-label="Milka Begin From Sunday, August 2, 2020 at 8:00:00 AM GMT+04:00 Ends At Sunday, August 2, 2020 at 8:30:00 AM GMT+04:00"]');     
     expect(await newAppointmentValidation).toHaveTextContaining('Milka');
