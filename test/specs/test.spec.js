@@ -78,7 +78,6 @@ describe('Doctors test', () => {
 });   
 
 //TASK2 - Basic commands
-
 describe('Basic commands doctors', () => {
   beforeEach(async () => {
     await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors');
@@ -150,3 +149,98 @@ describe('Basic commands patients', () => {
     await magnifyingGlass.click();
   });
 });
+
+//TASK3 - Advanced commands
+describe('execute', () => {
+  beforeEach(async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard');
+  });
+
+  it('execute()', async () => {
+    await browser.execute(function () {
+      const element = document.querySelector(".clinic-name");
+      element.style.color = 'indigo';
+      element.style.border = 'orange solid 4px';
+    });
+    await browser.pause(3000);
+  });
+});
+
+describe('waitUntil', () => {
+  beforeEach(async () => {
+    await browser.url('https://ej2.syncfusion.com/react/demos/progress-bar/semi-circular/');
+  });
+
+  it('waitUntil()', async () => {
+    await $('#reLoad').click();
+    await browser.waitUntil(async () => (await $('#point1').getText()) === '100%', {
+      timeout: 7000,
+      interval: 600,
+      timeoutMsg: 'not loaded',
+    });
+  });
+});
+
+describe('actions', () => {
+  it('mouse move', async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients');
+    const row = await $('div.e-responsive-header table[role=grid] tbody tr:first-child');
+    await row.moveTo();
+    await browser.pause(5000);
+  });
+
+  it('perform actions', async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar');
+    const slot1 = await $("[data-date='1596340800000']");
+    const slot2 = await $("[data-date='1596382200000']");
+    const SHIFT = '\uE008';
+    await slot1.click();
+    await browser.performActions([
+      {
+        type: 'key',
+        id: 'keyboard',
+        actions: [
+          {
+            type: 'keyDown',
+            value: SHIFT,
+          },
+        ],
+      },
+    ]);
+    await slot2.click();
+    await browser.pause(500);
+    await browser.performActions([
+      {
+        type: 'key',
+        id: 'keyboard',
+        actions: [
+          {
+            type: 'keyUp',
+            value: SHIFT,
+          },
+        ],
+      },
+    ]);
+    await browser.releaseActions();
+
+    await browser.pause(5000);
+  });
+});
+
+//bonus task
+describe('cookies', () => {
+  beforeEach(async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors');
+  });
+
+  it('setCookies()', async () => {
+    await browser.setCookies([
+      {
+        name: 'helloIamTheCookie',
+        value: '69',
+      },
+    ]);
+    await browser.pause(15000);
+  });
+});
+
