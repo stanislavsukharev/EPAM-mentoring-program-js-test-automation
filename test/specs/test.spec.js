@@ -1,4 +1,6 @@
-
+//const { customClick } = require('../customClick');
+import allureReporter from '@wdio/allure-reporter';
+import junit from "junit";
 
 describe('Patients test suite', () => {
   beforeEach(async () => {
