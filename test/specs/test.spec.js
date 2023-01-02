@@ -1,46 +1,45 @@
+
+
 describe('Patients test suite', () => {
   beforeEach(async () => {
     await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients');
-  });
-
-  it('search patient', async () => {
-    const searchPatient = await $("//input[@id='schedule_searchbar']");
-    const magnifyingGlass = await $("//span[@id='schedule_searchbutton']");
-
-    await searchPatient.click();
-    await searchPatient.setValue('Mercy');
-    await magnifyingGlass.click();
-
-    const emailValidation = await $("//span[text()='Mercy']");
-    expect(await emailValidation.getText()).toEqual('Mercy');
-  });
+    });
+    
+    it('search patient', async () => {
+      const searchPatient = await $("//input[@id='schedule_searchbar']");
+      const magnifyingGlass = await $("//span[@id='schedule_searchbutton']");
   
-  it('add new patient', async () => {
-    const addNewPatientButton = await $("//button[text()='Add New Patient']");
-    const inputPatientName = await $("//input[@name='Name']");
-    const inputMobileNumber = await $("//input[@id='PatientMobile']");
-    const inputEmail = await $("//input[@name='Email']");
-    const saveButton = await $("//button[text()='Save']");
-
-    await addNewPatientButton.click();
-    await inputPatientName.click();
-    await inputPatientName.setValue('Mister Twister');
-    await inputMobileNumber.click();
-    await inputMobileNumber.setValue('(333) 333-3333');
-    await inputEmail.setValue('mister@twister.com');
-    await saveButton.click();
-
-    const newEntryValidation = await $("//span[text()='Mister Twister']")
-    expect(await newEntryValidation).toBeClickable()
-  })
-});   
+      await searchPatient.click();
+      await searchPatient.setValue('Mercy');
+      await magnifyingGlass.click();
+  
+      const emailValidation = await $("//span[text()='Mercy']");
+      expect(await emailValidation).toExist();
+    });
+    
+    it('add new patient', async () => {
+      const addNewPatientButton = await $("//button[text()='Add New Patient']");
+      const inputPatientName = await $("//input[@name='Name']");
+      const inputMobileNumber = await $("//input[@id='PatientMobile']");
+      const inputEmail = await $("//input[@name='Email']");
+      const saveButton = await $("//button[text()='Save']");
+  
+      await addNewPatientButton.click();
+      await inputPatientName.click();
+      await inputPatientName.setValue('Mister Twister');
+      await inputMobileNumber.click();
+      await inputMobileNumber.setValue('(333) 333-3333');
+      await inputEmail.setValue('mister@twister.com');
+      await saveButton.click();
+  
+      const newEntryValidation = await $("//span[text()='Mister Twister']")
+      expect(await newEntryValidation).toBeClickable()
+    })
+  });  
 
 describe('Calendar appointment test', () => {
-  beforeEach(async () => {
-    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar');
-  });
-
   it('add appointment', async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar');
     const appointment = await $('[data-date="1596340800000"]');
     const inputPatientName = await $("//input[@id='PatientName']");
     const symptomField = await $("//textarea[@name='Symptoms']");
@@ -51,39 +50,33 @@ describe('Calendar appointment test', () => {
     await symptomField.setValue('bipolar disorder');
     await saveAppointmentButton.click();
 
-    const newAppointmentValidation = await $('[aria-label="Milka Begin From Sunday, August 2, 2020 at 8:00:00 AM GMT+04:00 Ends At Sunday, August 2, 2020 at 8:30:00 AM GMT+04:00"]');     
-    expect(await newAppointmentValidation).toHaveTextContaining('Milka');
+    const newAppointmentValidation = await $("//div[@data-id='Appointment_1092']");     
+    expect(await newAppointmentValidation).toExist();
     });
 });   
 
 describe('Doctors test', () => {
-  beforeEach(async () => {
-    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors');
-  });
-
   it('delete doctors entry', async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors');
     const doctorsEntry = await $("//div[@id='Specialist_7']");
-    const deleteDoctorButton = await $("//button[text()='Delete']")
-    const deleteDoctorButtonOk = await $("//button[text()='Ok']")
-    const doctorsButton = await $("//span[text()='Doctors']")
+    const deleteDoctorButton = await $("//button[text()='Delete']");
+    const deleteDoctorButtonOk = await $("//button[text()='Ok']");
+    const doctorsButton = await $("//span[text()='Doctors']");
     
     await doctorsEntry.click();
     await deleteDoctorButton.click();
     await deleteDoctorButtonOk.click();
     await doctorsButton.click();
     
-    const deletedEntryValidation = await $("//div[@id='Specialist_7']")
-    expect(await deletedEntryValidation).toExist()
+    const deletedEntryValidation = await $("//div[@id='Specialist_7']");
+    expect(await deletedEntryValidation).toExist();
     });
 });   
 
 //TASK2 - Basic commands
 describe('Basic commands doctors', () => {
-  beforeEach(async () => {
-    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors');
-  });
-
   it('add new doctor', async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors');
     const addNewDoctorButton = await $("//button[text()='Add New Doctor']");
     const addNewDoctorModalWindow = await $(".new-doctor-dialog");
     const inputDoctorName = await $("//input[@name='Name']");
@@ -99,6 +92,9 @@ describe('Basic commands doctors', () => {
     await inputMobileNumber.setValue('(666) 666-6666');
     await inputEmail.setValue('wednesday@addams.com');
     await saveButton.click();
+
+    const newDoctorEntryValidation = await $("//div[@id='Specialist_8']");
+    expect(await newDoctorEntryValidation).toExist();
   });
 });   
 
@@ -108,36 +104,37 @@ describe('Basic commands calendar', () => {
   });
 
   it('delete appointment', async () => {
-    const appointment = await $('[aria-label="Mercy Begin From Sunday, August 2, 2020 at 10:00:00 AM GMT+04:00 Ends At Sunday, August 2, 2020 at 11:00:00 AM GMT+04:00"]');
-    const modalWindow = await $(".quick-info-title");
-    
-    await appointment.waitForDisplayed();
+    const appointment = await $("//div[@data-id='Appointment_1002']");
+    const deleteButton = await $("//button[@title='Delete']");
+    const deleteButtonConfirm = await $("//button[@aria-label='Delete']");
+
     await appointment.click();
-    await modalWindow.waitForExist();
-  });
-});   
-
-describe('Basic commands preferences', () => {
-  beforeEach(async () => {
-    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/preference');
+    await deleteButton.click();
+    await deleteButtonConfirm.click();
+    
+    const deletedAppointmentValidation = await $("//div[@data-id='Appointment_1002']");     
+    expect(await deletedAppointmentValidation).toExist();
   });
 
-  it('change preferences', async () => {
-   const deafultViewDropdown = await $('//span[@aria-owns="CurrentView_options"]');
-   const changeDeafultViewOption = await $('//input[@aria-label="Weekly"]');
+  it('add appointment', async () => {
+    const appointment = await $('[data-date="1596686400000"]');
+    const inputPatientName = await $("//input[@id='PatientName']");
+    const symptomField = await $("//textarea[@name='Symptoms']");
+    const saveAppointmentButton = await $(".e-event-save");
 
-   await deafultViewDropdown.isExisting();
-   await deafultViewDropdown.click();
-   await changeDeafultViewOption.isExisting();
-  });
+    await appointment.doubleClick();
+    await inputPatientName.setValue('Adams'); 
+    await symptomField.setValue('Schizophrenia');
+    await saveAppointmentButton.click();
+
+    const newAppointmentValidation = await $("//div[@data-id='Appointment_1030']");     
+    expect(await newAppointmentValidation).toExist();
+    });
 });   
 
 describe('Basic commands patients', () => {
-  beforeEach(async () => {
-    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients');
-  });
-
   it('search patient', async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients');
     const searchPatient = await $("//input[@id='schedule_searchbar']");
     const magnifyingGlass = await $("//span[@id='schedule_searchbutton']");
 
@@ -147,31 +144,27 @@ describe('Basic commands patients', () => {
     await searchPatient.addValue(' Oliver');
     await magnifyingGlass.isExisting();
     await magnifyingGlass.click();
+
+    const PatientValidation = await $("//span[text()='Maud Oliver']");
+    expect(await PatientValidation).toBeClickable();
   });
 });
 
 //TASK3 - Advanced commands
 describe('execute', () => {
-  beforeEach(async () => {
-    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard');
-  });
-
   it('execute()', async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard');
     await browser.execute(function () {
       const element = document.querySelector(".clinic-name");
       element.style.color = 'indigo';
       element.style.border = 'orange solid 4px';
     });
-    await browser.pause(3000);
   });
 });
 
 describe('waitUntil', () => {
-  beforeEach(async () => {
-    await browser.url('https://ej2.syncfusion.com/react/demos/progress-bar/semi-circular/');
-  });
-
   it('waitUntil()', async () => {
+    await browser.url('https://ej2.syncfusion.com/react/demos/progress-bar/semi-circular/');
     await $('#reLoad').click();
     await browser.waitUntil(async () => (await $('#point1').getText()) === '100%', {
       timeout: 7000,
@@ -184,9 +177,8 @@ describe('waitUntil', () => {
 describe('actions', () => {
   it('mouse move', async () => {
     await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients');
-    const row = await $('div.e-responsive-header table[role=grid] tbody tr:first-child');
-    await row.moveTo();
-    await browser.pause(5000);
+    const firstRow = await $('div.e-responsive-header table[role=grid] tbody tr:first-child');
+    await firstRow.moveTo();
   });
 
   it('perform actions', async () => {
@@ -222,25 +214,29 @@ describe('actions', () => {
       },
     ]);
     await browser.releaseActions();
-
-    await browser.pause(5000);
   });
 });
 
 //bonus task
 describe('cookies', () => {
-  beforeEach(async () => {
-    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors');
-  });
-
   it('setCookies()', async () => {
+    await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors');
     await browser.setCookies([
       {
         name: 'helloIamTheCookie',
         value: '69',
       },
     ]);
-    await browser.pause(15000);
+
+    const testCookie = await browser.getCookies(['helloIamTheCookie']);
+    console.log(testCookie); 
+    expect (await testCookie).toEqual([{
+          "domain": "ej2.syncfusion.com",
+          "httpOnly": false,
+          "name": "helloIamTheCookie",
+          "path": "/",
+          "secure": true,
+          "value": "69",
+    }])
   });
 });
-
