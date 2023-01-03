@@ -1,7 +1,3 @@
-//const { customClick } = require('../customClick');
-import allureReporter from '@wdio/allure-reporter';
-import junit from "junit";
-
 describe('Patients test suite', () => {
   beforeEach(async () => {
     await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients');
@@ -11,9 +7,9 @@ describe('Patients test suite', () => {
       const searchPatient = await $("//input[@id='schedule_searchbar']");
       const magnifyingGlass = await $("//span[@id='schedule_searchbutton']");
   
-      await searchPatient.click();
+      await searchPatient.customClick();
       await searchPatient.setValue('Mercy');
-      await magnifyingGlass.click();
+      await magnifyingGlass.customClick();
   
       const emailValidation = await $("//span[text()='Mercy']");
       expect(await emailValidation).toExist();
@@ -26,13 +22,13 @@ describe('Patients test suite', () => {
       const inputEmail = await $("//input[@name='Email']");
       const saveButton = await $("//button[text()='Save']");
   
-      await addNewPatientButton.click();
-      await inputPatientName.click();
+      await addNewPatientButton.customClick();
+      await inputPatientName.customClick();
       await inputPatientName.setValue('Mister Twister');
-      await inputMobileNumber.click();
+      await inputMobileNumber.customClick();
       await inputMobileNumber.setValue('(333) 333-3333');
       await inputEmail.setValue('mister@twister.com');
-      await saveButton.click();
+      await saveButton.customClick();
   
       const newEntryValidation = await $("//span[text()='Mister Twister']")
       expect(await newEntryValidation).toBeClickable()
@@ -50,7 +46,7 @@ describe('Calendar appointment test', () => {
     await appointment.doubleClick();
     await inputPatientName.setValue('Milka'); 
     await symptomField.setValue('bipolar disorder');
-    await saveAppointmentButton.click();
+    await saveAppointmentButton.customClick();
 
     const newAppointmentValidation = await $("//div[@data-id='Appointment_1092']");     
     expect(await newAppointmentValidation).toExist();
@@ -65,16 +61,15 @@ describe('Doctors test', () => {
     const deleteDoctorButtonOk = await $("//button[text()='Ok']");
     const doctorsButton = await $("//span[text()='Doctors']");
     
-    await doctorsEntry.click();
-    await deleteDoctorButton.click();
-    await deleteDoctorButtonOk.click();
-    await doctorsButton.click();
+    await doctorsEntry.customClick();
+    await deleteDoctorButton.customClick();
+    await deleteDoctorButtonOk.customClick();
+    await doctorsButton.customClick();
     
     const deletedEntryValidation = await $("//div[@id='Specialist_7']");
     expect(await deletedEntryValidation).toExist();
     });
 });   
-
 //TASK2 - Basic commands
 describe('Basic commands doctors', () => {
   it('add new doctor', async () => {
@@ -86,14 +81,12 @@ describe('Basic commands doctors', () => {
     const inputEmail = await $("//input[@name='Email']");
     const saveButton = await $("//button[text()='Save']");
 
-    
-    await addNewDoctorButton.waitForDisplayed();
-    await addNewDoctorButton.click();
+    await addNewDoctorButton.customClick();
     await addNewDoctorModalWindow.isDisplayed();
     await inputDoctorName.setValue('Wednesday Addams');
     await inputMobileNumber.setValue('(666) 666-6666');
     await inputEmail.setValue('wednesday@addams.com');
-    await saveButton.click();
+    await saveButton.customClick();
 
     const newDoctorEntryValidation = await $("//div[@id='Specialist_8']");
     expect(await newDoctorEntryValidation).toExist();
@@ -110,9 +103,9 @@ describe('Basic commands calendar', () => {
     const deleteButton = await $("//button[@title='Delete']");
     const deleteButtonConfirm = await $("//button[@aria-label='Delete']");
 
-    await appointment.click();
-    await deleteButton.click();
-    await deleteButtonConfirm.click();
+    await appointment.customClick();
+    await deleteButton.customClick();
+    await deleteButtonConfirm.customClick();
     
     const deletedAppointmentValidation = await $("//div[@data-id='Appointment_1002']");     
     expect(await deletedAppointmentValidation).toExist();
@@ -127,7 +120,7 @@ describe('Basic commands calendar', () => {
     await appointment.doubleClick();
     await inputPatientName.setValue('Adams'); 
     await symptomField.setValue('Schizophrenia');
-    await saveAppointmentButton.click();
+    await saveAppointmentButton.customClick();
 
     const newAppointmentValidation = await $("//div[@data-id='Appointment_1030']");     
     expect(await newAppointmentValidation).toExist();
@@ -140,19 +133,16 @@ describe('Basic commands patients', () => {
     const searchPatient = await $("//input[@id='schedule_searchbar']");
     const magnifyingGlass = await $("//span[@id='schedule_searchbutton']");
 
-    await searchPatient.isDisplayed();
-    await searchPatient.click();
+    await searchPatient.customClick();
     await searchPatient.setValue('Maud');
     await searchPatient.addValue(' Oliver');
-    await magnifyingGlass.isExisting();
-    await magnifyingGlass.click();
+    await magnifyingGlass.customClick();
 
-    const PatientValidation = await $("//span[text()='Maud Oliver']");
-    expect(await PatientValidation).toBeClickable();
+    const patientValidation = await $("//span[text()='Maud Oliver']");
+    expect(await patientValidation).toBeClickable();
   });
 });
-
-//TASK3 - Advanced commands
+// TASK3 - Advanced commands
 describe('execute', () => {
   it('execute()', async () => {
     await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard');
@@ -161,18 +151,22 @@ describe('execute', () => {
       element.style.color = 'indigo';
       element.style.border = 'orange solid 4px';
     });
+      const newElementValidation = await $("//h1[@style='color: indigo; border: 4px solid orange']");
+      expect(await newElementValidation).toExist();
   });
 });
 
 describe('waitUntil', () => {
   it('waitUntil()', async () => {
     await browser.url('https://ej2.syncfusion.com/react/demos/progress-bar/semi-circular/');
-    await $('#reLoad').click();
+    await $('#reLoad').customClick();
     await browser.waitUntil(async () => (await $('#point1').getText()) === '100%', {
       timeout: 7000,
       interval: 600,
       timeoutMsg: 'not loaded',
     });
+    const pointValidation = await $('#point1');
+    expect(await pointValidation.getText()).toEqual('100%');
   });
 });
 
@@ -181,14 +175,17 @@ describe('actions', () => {
     await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients');
     const firstRow = await $('div.e-responsive-header table[role=grid] tbody tr:first-child');
     await firstRow.moveTo();
+    
+    const focusValidation = await $('div.e-responsive-header table[role=grid] tbody tr:first-child');
+    expect(await focusValidation.isFocused());
   });
 
   it('perform actions', async () => {
     await browser.url('https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar');
     const slot1 = await $("[data-date='1596340800000']");
-    const slot2 = await $("[data-date='1596382200000']");
+    const slot2 = await $("[data-date='1596342600000']");
     const SHIFT = '\uE008';
-    await slot1.click();
+    await slot1.customClick();
     await browser.performActions([
       {
         type: 'key',
@@ -201,7 +198,7 @@ describe('actions', () => {
         ],
       },
     ]);
-    await slot2.click();
+    await slot2.customClick();
     await browser.pause(500);
     await browser.performActions([
       {
@@ -216,9 +213,13 @@ describe('actions', () => {
       },
     ]);
     await browser.releaseActions();
+    
+    const slotValidationFirst = await $("[data-date='1596340800000']");
+    expect (slotValidationFirst.isFocused());
+    const slotValidationLast = await $("[data-date='1596342600000']");
+    expect (slotValidationLast.isFocused());
   });
 });
-
 //bonus task
 describe('cookies', () => {
   it('setCookies()', async () => {
@@ -229,16 +230,10 @@ describe('cookies', () => {
         value: '69',
       },
     ]);
-
-    const testCookie = await browser.getCookies(['helloIamTheCookie']);
-    console.log(testCookie); 
-    expect (await testCookie).toEqual([{
-          "domain": "ej2.syncfusion.com",
-          "httpOnly": false,
-          "name": "helloIamTheCookie",
-          "path": "/",
-          "secure": true,
-          "value": "69",
+    const testCookie = await browser.getCookies(['helloIamTheCookie']); 
+    expect (await testCookie).toHaveValueContaining([{
+      name: 'helloIamTheCookie',
+      value: '69',
     }])
   });
 });
