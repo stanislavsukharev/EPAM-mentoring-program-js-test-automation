@@ -161,7 +161,7 @@ describe("Basic commands patients", () => {
   });
 });
 // TASK3 - Advanced commands
-describe("execute", () => {
+describe("adding css style", () => {
   it("execute()", async () => {
     await browser.url(
       "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard"
@@ -178,7 +178,7 @@ describe("execute", () => {
   });
 });
 
-describe("waitUntil", () => {
+describe("progress bar semi circular", () => {
   it("waitUntil()", async () => {
     await browser.url(
       "https://ej2.syncfusion.com/react/demos/progress-bar/semi-circular/"
@@ -213,7 +213,7 @@ describe("actions", () => {
     expect(await focusValidation.isFocused());
   });
 
-  it("perform actions", async () => {
+  it("selecting multiple cells", async () => {
     await browser.url(
       "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"
     );
@@ -257,7 +257,7 @@ describe("actions", () => {
 });
 
 //bonus task
-describe("cookies", () => {
+describe("set cookies", () => {
   it("setCookies()", async () => {
     await browser.url(
       "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"
