@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Patients test suite" timestamp="2023-01-04T09:18:26" time="3.823" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Patients test suite"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.Patients_test_suite" name="search patient" time="2.644">
+      <system-out><![CDATA[
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@id='schedule_searchbar']"}
+RESULT: {"using":"xpath","value":"//input[@id='schedule_searchbar']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//span[@id='schedule_searchbutton']"}
+RESULT: {"using":"xpath","value":"//span[@id='schedule_searchbutton']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/bbad1271-7be5-411a-8504-647ee7547aaa/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"bbad1271-7be5-411a-8504-647ee7547aaa","ELEMENT":"bbad1271-7be5-411a-8504-647ee7547aaa"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"bbad1271-7be5-411a-8504-647ee7547aaa","ELEMENT":"bbad1271-7be5-411a-8504-647ee7547aaa"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/bbad1271-7be5-411a-8504-647ee7547aaa/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/bbad1271-7be5-411a-8504-647ee7547aaa/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/bbad1271-7be5-411a-8504-647ee7547aaa/value - {"text":"Mercy"}
+RESULT: {"text":"Mercy"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/7cbf25e9-f3b2-495a-86fa-d7e0b6331cb8/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"7cbf25e9-f3b2-495a-86fa-d7e0b6331cb8","ELEMENT":"7cbf25e9-f3b2-495a-86fa-d7e0b6331cb8"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"7cbf25e9-f3b2-495a-86fa-d7e0b6331cb8","ELEMENT":"7cbf25e9-f3b2-495a-86fa-d7e0b6331cb8"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/7cbf25e9-f3b2-495a-86fa-d7e0b6331cb8/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//span[text()='Mercy']"}
+RESULT: {"using":"xpath","value":"//span[text()='Mercy']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//span[text()='Mercy']"}
+]]></system-out>
+    </testcase>
+    <testcase classname="firefox.108_0_1.windows.Patients_test_suite" name="add new patient" time="1.167">
+      <system-out><![CDATA[
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"}
+RESULT: {"using":"xpath","value":"//span[text()='Mercy']"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[text()='Add New Patient']"}
+RESULT: {"using":"xpath","value":"//button[text()='Add New Patient']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@name='Name']"}
+RESULT: {"using":"xpath","value":"//input[@name='Name']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@id='PatientMobile']"}
+RESULT: {"using":"xpath","value":"//input[@id='PatientMobile']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@name='Email']"}
+RESULT: {"using":"xpath","value":"//input[@name='Email']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[text()='Save']"}
+RESULT: {"using":"xpath","value":"//button[text()='Save']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/72c5892e-883a-441d-9431-57dfb2c9f858/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"72c5892e-883a-441d-9431-57dfb2c9f858","ELEMENT":"72c5892e-883a-441d-9431-57dfb2c9f858"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"72c5892e-883a-441d-9431-57dfb2c9f858","ELEMENT":"72c5892e-883a-441d-9431-57dfb2c9f858"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/72c5892e-883a-441d-9431-57dfb2c9f858/click - {}
+RESULT: {}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/1fcad180-6747-4e33-beb3-c161160365b7/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"1fcad180-6747-4e33-beb3-c161160365b7","ELEMENT":"1fcad180-6747-4e33-beb3-c161160365b7"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"1fcad180-6747-4e33-beb3-c161160365b7","ELEMENT":"1fcad180-6747-4e33-beb3-c161160365b7"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/1fcad180-6747-4e33-beb3-c161160365b7/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/1fcad180-6747-4e33-beb3-c161160365b7/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/1fcad180-6747-4e33-beb3-c161160365b7/value - {"text":"Mister Twister"}
+RESULT: {"text":"Mister Twister"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/13c117da-ce9a-4a99-aca9-9705e437a530/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"13c117da-ce9a-4a99-aca9-9705e437a530","ELEMENT":"13c117da-ce9a-4a99-aca9-9705e437a530"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"13c117da-ce9a-4a99-aca9-9705e437a530","ELEMENT":"13c117da-ce9a-4a99-aca9-9705e437a530"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/13c117da-ce9a-4a99-aca9-9705e437a530/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/13c117da-ce9a-4a99-aca9-9705e437a530/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/13c117da-ce9a-4a99-aca9-9705e437a530/value - {"text":"(333) 333-3333"}
+RESULT: {"text":"(333) 333-3333"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/0eecca7f-dbe0-49f8-b3b6-b4787139b6b6/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/0eecca7f-dbe0-49f8-b3b6-b4787139b6b6/value - {"text":"mister@twister.com"}
+RESULT: {"text":"mister@twister.com"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/18ea6044-0f55-4de8-9ece-3157fcb113ef/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"18ea6044-0f55-4de8-9ece-3157fcb113ef","ELEMENT":"18ea6044-0f55-4de8-9ece-3157fcb113ef"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"18ea6044-0f55-4de8-9ece-3157fcb113ef","ELEMENT":"18ea6044-0f55-4de8-9ece-3157fcb113ef"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/18ea6044-0f55-4de8-9ece-3157fcb113ef/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//span[text()='Mister Twister']"}
+RESULT: {"using":"xpath","value":"//span[text()='Mister Twister']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/8b5e56c7-0b4b-4fcc-a2b5-e1c805340593/displayed - {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="Calendar appointment test" timestamp="2023-01-04T09:18:30" time="1.199" tests="1" failures="1" errors="1" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Calendar appointment test"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.Calendar_appointment_test" name="add appointment" time="1.194">
+      <failure/>
+      <error message="symptomField is not defined"/>
+      <system-out><![CDATA[
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"8b5e56c7-0b4b-4fcc-a2b5-e1c805340593","ELEMENT":"8b5e56c7-0b4b-4fcc-a2b5-e1c805340593"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"8b5e56c7-0b4b-4fcc-a2b5-e1c805340593","ELEMENT":"8b5e56c7-0b4b-4fcc-a2b5-e1c805340593"}]}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"[data-date=\"1596340800000\"]"}
+RESULT: {"using":"css selector","value":"[data-date=\"1596340800000\"]"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@id='PatientName']"}
+RESULT: {"using":"xpath","value":"//input[@id='PatientName']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":".e-event-save"}
+RESULT: {"using":"css selector","value":".e-event-save"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"css selector","value":"[data-date=\"1596340800000\"]"}
+RESULT: {"using":"css selector","value":"[data-date=\"1596340800000\"]"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"css selector","value":"[data-date=\"1596340800000\"]"}
+RESULT: {"using":"css selector","value":"[data-date=\"1596340800000\"]"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"[data-date=\"1596340800000\"]"}
+RESULT: {"using":"css selector","value":"[data-date=\"1596340800000\"]"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/actions - {"actions":[{"type":"pointer","id":"pointer1","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","origin":{"sessionId":"6eb38d15-83ad-411e-961c-d84ed52fd2e6","error":{"error":"no such element","message":"Unable to locate element: [data-date=\"1596340800000\"]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:182:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:394:5\nelement.find/</<@chrome://remote/content/marionette/element.sys.mjs:275:16\n"},"selector":"[data-date=\"1596340800000\"]","parent":{"capabilities":{"acceptInsecureCerts":true,"browserName":"firefox","browserVersion":"108.0.1","moz:accessibilityChecks":false,"moz:buildID":"20221215175817","moz:geckodriverVersion":"0.32.0","moz:headless":false,"moz:platformVersion":"10.0","moz:processID":9304,"moz:profile":"C:\\Users\\STANIS~1\\AppData\\Local\\Temp\\rust_mozprofilehI0moF","_":"11 more keys: [\"moz:shutdownTimeout\",\"moz:useNonSpecCompliantPointerOrigin\",\"moz:webdriverClick\",\"moz:windowless\",\"pageLoadStrategy\",\"platformName\",\"proxy\",\"setWindowRect\",\"strictFileInteractability\",\"timeouts\",\"unhandledPromptBehavior\"]"},"config":{"specs":["./test/specs/**/*.js"],"suites":{},"exclude":[],"logLevel":"error","logLevels":{},"excludeDriverLogs":[],"bail":0,"waitforInterval":500,"waitforTimeout":10000,"framework":"mocha","_":"48 more keys: [\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"filesToWatch\",\"connectionRetryTimeout\",\"connectionRetryCount\",\"execArgv\",\"runnerEnv\",\"runner\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"beforeCommand\",\"afterCommand\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"onReload\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"baseUrl\",\"_\",\"$0\",\"config-path\",\"ignoredWorkerServices\"]"}},"isReactElement":false,"elementId":"b6cddc61-0dc9-4034-88cb-e0b984c53921","element-6066-11e4-a52e-4f735466cecf":"b6cddc61-0dc9-4034-88cb-e0b984c53921"},"x":0,"y":0},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0}]}]}
+RESULT: {"actions":[{"type":"pointer","id":"pointer1","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","origin":{"sessionId":"6eb38d15-83ad-411e-961c-d84ed52fd2e6","error":{"error":"no such element","message":"Unable to locate element: [data-date=\"1596340800000\"]","stacktrace":"RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:182:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:394:5\nelement.find/</<@chrome://remote/content/marionette/element.sys.mjs:275:16\n"},"selector":"[data-date=\"1596340800000\"]","parent":{"capabilities":{"acceptInsecureCerts":true,"browserName":"firefox","browserVersion":"108.0.1","moz:accessibilityChecks":false,"moz:buildID":"20221215175817","moz:geckodriverVersion":"0.32.0","moz:headless":false,"moz:platformVersion":"10.0","moz:processID":9304,"moz:profile":"C:\\Users\\STANIS~1\\AppData\\Local\\Temp\\rust_mozprofilehI0moF","_":"11 more keys: [\"moz:shutdownTimeout\",\"moz:useNonSpecCompliantPointerOrigin\",\"moz:webdriverClick\",\"moz:windowless\",\"pageLoadStrategy\",\"platformName\",\"proxy\",\"setWindowRect\",\"strictFileInteractability\",\"timeouts\",\"unhandledPromptBehavior\"]"},"config":{"specs":["./test/specs/**/*.js"],"suites":{},"exclude":[],"logLevel":"error","logLevels":{},"excludeDriverLogs":[],"bail":0,"waitforInterval":500,"waitforTimeout":10000,"framework":"mocha","_":"48 more keys: [\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"filesToWatch\",\"connectionRetryTimeout\",\"connectionRetryCount\",\"execArgv\",\"runnerEnv\",\"runner\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"beforeCommand\",\"afterCommand\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"onReload\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"baseUrl\",\"_\",\"$0\",\"config-path\",\"ignoredWorkerServices\"]"}},"isReactElement":false,"elementId":"b6cddc61-0dc9-4034-88cb-e0b984c53921","element-6066-11e4-a52e-4f735466cecf":"b6cddc61-0dc9-4034-88cb-e0b984c53921"},"x":0,"y":0},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0}]}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//input[@id='PatientName']"}
+RESULT: {"using":"xpath","value":"//input[@id='PatientName']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@id='PatientName']"}
+RESULT: {"using":"xpath","value":"//input[@id='PatientName']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/daa175e8-bce0-48e7-aed6-a900d4c04edf/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/daa175e8-bce0-48e7-aed6-a900d4c04edf/value - {"text":"Milka"}
+RESULT: {"text":"Milka"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/screenshot - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+ReferenceError: symptomField is not defined
+    at Context.<anonymous> (C:\Users\Stanislav_Sukharev\Desktop\JSAMP\js-atm-program\test\specs\test.spec.js:52:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+]]></system-err>
+    </testcase>
+  </testsuite>
+  <testsuite name="Doctors test" timestamp="2023-01-04T09:18:31" time="1.411" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Doctors test"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.Doctors_test" name="delete doctors entry" time="1.407">
+      <system-out><![CDATA[
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//div[@id='Specialist_7']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_7']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[text()='Delete']"}
+RESULT: {"using":"xpath","value":"//button[text()='Delete']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[text()='Ok']"}
+RESULT: {"using":"xpath","value":"//button[text()='Ok']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//span[text()='Doctors']"}
+RESULT: {"using":"xpath","value":"//span[text()='Doctors']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/2a130066-bf3c-429f-a7fb-f02afcf14e2f/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"2a130066-bf3c-429f-a7fb-f02afcf14e2f","ELEMENT":"2a130066-bf3c-429f-a7fb-f02afcf14e2f"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"2a130066-bf3c-429f-a7fb-f02afcf14e2f","ELEMENT":"2a130066-bf3c-429f-a7fb-f02afcf14e2f"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/2a130066-bf3c-429f-a7fb-f02afcf14e2f/click - {}
+RESULT: {}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/e70d25c7-c183-4af7-b627-5e4e3e6163c1/displayed - {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[text()='Delete']"}
+RESULT: {"using":"xpath","value":"//button[text()='Delete']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/e70d25c7-c183-4af7-b627-5e4e3e6163c1/displayed - {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[text()='Delete']"}
+RESULT: {"using":"xpath","value":"//button[text()='Delete']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/f0dff047-4186-4662-b691-2fe9aa007350/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f0dff047-4186-4662-b691-2fe9aa007350","ELEMENT":"f0dff047-4186-4662-b691-2fe9aa007350"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"f0dff047-4186-4662-b691-2fe9aa007350","ELEMENT":"f0dff047-4186-4662-b691-2fe9aa007350"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/f0dff047-4186-4662-b691-2fe9aa007350/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//button[text()='Ok']"}
+RESULT: {"using":"xpath","value":"//button[text()='Ok']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[text()='Ok']"}
+RESULT: {"using":"xpath","value":"//button[text()='Ok']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/50a01f9e-b877-444c-b7c3-abf19e5ab2f2/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"50a01f9e-b877-444c-b7c3-abf19e5ab2f2","ELEMENT":"50a01f9e-b877-444c-b7c3-abf19e5ab2f2"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"50a01f9e-b877-444c-b7c3-abf19e5ab2f2","ELEMENT":"50a01f9e-b877-444c-b7c3-abf19e5ab2f2"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/50a01f9e-b877-444c-b7c3-abf19e5ab2f2/click - {}
+RESULT: {}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/d4f3751b-7feb-4210-9265-9213afeee08c/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d4f3751b-7feb-4210-9265-9213afeee08c","ELEMENT":"d4f3751b-7feb-4210-9265-9213afeee08c"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d4f3751b-7feb-4210-9265-9213afeee08c","ELEMENT":"d4f3751b-7feb-4210-9265-9213afeee08c"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/d4f3751b-7feb-4210-9265-9213afeee08c/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//div[@id='Specialist_7']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_7']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//div[@id='Specialist_7']"}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="Basic commands doctors" timestamp="2023-01-04T09:18:32" time="0.685" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Basic commands doctors"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.Basic_commands_doctors" name="add new doctor" time="0.68">
+      <system-out><![CDATA[
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_7']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[text()='Add New Doctor']"}
+RESULT: {"using":"xpath","value":"//button[text()='Add New Doctor']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":".new-doctor-dialog"}
+RESULT: {"using":"css selector","value":".new-doctor-dialog"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@name='Name']"}
+RESULT: {"using":"xpath","value":"//input[@name='Name']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@id='DoctorMobile']"}
+RESULT: {"using":"xpath","value":"//input[@id='DoctorMobile']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@name='Email']"}
+RESULT: {"using":"xpath","value":"//input[@name='Email']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[text()='Save']"}
+RESULT: {"using":"xpath","value":"//button[text()='Save']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/00e79722-3d01-4b84-9e8c-df596627c5c7/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"00e79722-3d01-4b84-9e8c-df596627c5c7","ELEMENT":"00e79722-3d01-4b84-9e8c-df596627c5c7"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"00e79722-3d01-4b84-9e8c-df596627c5c7","ELEMENT":"00e79722-3d01-4b84-9e8c-df596627c5c7"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/00e79722-3d01-4b84-9e8c-df596627c5c7/click - {}
+RESULT: {}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/0714a8ba-143f-4c60-b9fe-bff1f1ff7d55/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/678370bf-8672-4b8c-a0f4-08057d61dff4/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/678370bf-8672-4b8c-a0f4-08057d61dff4/value - {"text":"Wednesday Addams"}
+RESULT: {"text":"Wednesday Addams"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/f9a200ed-aede-46d8-bd51-4794fa339f48/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/f9a200ed-aede-46d8-bd51-4794fa339f48/value - {"text":"(666) 666-6666"}
+RESULT: {"text":"(666) 666-6666"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/bec80b03-f32d-4001-b58c-87832e565698/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/bec80b03-f32d-4001-b58c-87832e565698/value - {"text":"wednesday@addams.com"}
+RESULT: {"text":"wednesday@addams.com"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/703000f8-0cd9-4ae9-8523-f55331947ac1/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"703000f8-0cd9-4ae9-8523-f55331947ac1","ELEMENT":"703000f8-0cd9-4ae9-8523-f55331947ac1"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"703000f8-0cd9-4ae9-8523-f55331947ac1","ELEMENT":"703000f8-0cd9-4ae9-8523-f55331947ac1"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/703000f8-0cd9-4ae9-8523-f55331947ac1/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="Basic commands calendar" timestamp="2023-01-04T09:18:33" time="2.512" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Basic commands calendar"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.Basic_commands_calendar" name="delete appointment" time="1.484">
+      <system-out><![CDATA[
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[@title='Delete']"}
+RESULT: {"using":"xpath","value":"//button[@title='Delete']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[@aria-label='Delete']"}
+RESULT: {"using":"xpath","value":"//button[@aria-label='Delete']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/9dcf7e9b-e5f1-4c64-9e43-c9226935eee7/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"9dcf7e9b-e5f1-4c64-9e43-c9226935eee7","ELEMENT":"9dcf7e9b-e5f1-4c64-9e43-c9226935eee7"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"9dcf7e9b-e5f1-4c64-9e43-c9226935eee7","ELEMENT":"9dcf7e9b-e5f1-4c64-9e43-c9226935eee7"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/9dcf7e9b-e5f1-4c64-9e43-c9226935eee7/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//button[@title='Delete']"}
+RESULT: {"using":"xpath","value":"//button[@title='Delete']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[@title='Delete']"}
+RESULT: {"using":"xpath","value":"//button[@title='Delete']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/567afac8-c4f3-406a-b50a-a32e85204613/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"567afac8-c4f3-406a-b50a-a32e85204613","ELEMENT":"567afac8-c4f3-406a-b50a-a32e85204613"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"567afac8-c4f3-406a-b50a-a32e85204613","ELEMENT":"567afac8-c4f3-406a-b50a-a32e85204613"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/567afac8-c4f3-406a-b50a-a32e85204613/click - {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//button[@aria-label='Delete']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//button[@aria-label='Delete']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//button[@aria-label='Delete']"}
+RESULT: {"using":"xpath","value":"//button[@aria-label='Delete']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/127998bf-163e-410d-81d9-e7e597d1acf5/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"127998bf-163e-410d-81d9-e7e597d1acf5","ELEMENT":"127998bf-163e-410d-81d9-e7e597d1acf5"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"127998bf-163e-410d-81d9-e7e597d1acf5","ELEMENT":"127998bf-163e-410d-81d9-e7e597d1acf5"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/127998bf-163e-410d-81d9-e7e597d1acf5/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+]]></system-out>
+    </testcase>
+    <testcase classname="firefox.108_0_1.windows.Basic_commands_calendar" name="add appointment" time="1.016">
+      <system-out><![CDATA[
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"[data-date=\"1596686400000\"]"}
+RESULT: {"using":"css selector","value":"[data-date=\"1596686400000\"]"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@id='PatientName']"}
+RESULT: {"using":"xpath","value":"//input[@id='PatientName']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//textarea[@name='Symptoms']"}
+RESULT: {"using":"xpath","value":"//textarea[@name='Symptoms']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":".e-event-save"}
+RESULT: {"using":"css selector","value":".e-event-save"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/actions - {"actions":[{"type":"pointer","id":"pointer1","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","origin":{"sessionId":"6eb38d15-83ad-411e-961c-d84ed52fd2e6","elementId":"d0b78412-f69b-428c-8ee6-21595b9eb4d4","element-6066-11e4-a52e-4f735466cecf":"d0b78412-f69b-428c-8ee6-21595b9eb4d4","selector":"[data-date=\"1596686400000\"]","parent":{"capabilities":{"acceptInsecureCerts":true,"browserName":"firefox","browserVersion":"108.0.1","moz:accessibilityChecks":false,"moz:buildID":"20221215175817","moz:geckodriverVersion":"0.32.0","moz:headless":false,"moz:platformVersion":"10.0","moz:processID":9304,"moz:profile":"C:\\Users\\STANIS~1\\AppData\\Local\\Temp\\rust_mozprofilehI0moF","_":"11 more keys: [\"moz:shutdownTimeout\",\"moz:useNonSpecCompliantPointerOrigin\",\"moz:webdriverClick\",\"moz:windowless\",\"pageLoadStrategy\",\"platformName\",\"proxy\",\"setWindowRect\",\"strictFileInteractability\",\"timeouts\",\"unhandledPromptBehavior\"]"},"config":{"specs":["./test/specs/**/*.js"],"suites":{},"exclude":[],"logLevel":"error","logLevels":{},"excludeDriverLogs":[],"bail":0,"waitforInterval":500,"waitforTimeout":10000,"framework":"mocha","_":"48 more keys: [\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"filesToWatch\",\"connectionRetryTimeout\",\"connectionRetryCount\",\"execArgv\",\"runnerEnv\",\"runner\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"beforeCommand\",\"afterCommand\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"onReload\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"baseUrl\",\"_\",\"$0\",\"config-path\",\"ignoredWorkerServices\"]"}},"isReactElement":false},"x":0,"y":0},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0}]}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"actions":[{"type":"pointer","id":"pointer1","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","origin":{"sessionId":"6eb38d15-83ad-411e-961c-d84ed52fd2e6","elementId":"d0b78412-f69b-428c-8ee6-21595b9eb4d4","element-6066-11e4-a52e-4f735466cecf":"d0b78412-f69b-428c-8ee6-21595b9eb4d4","selector":"[data-date=\"1596686400000\"]","parent":{"capabilities":{"acceptInsecureCerts":true,"browserName":"firefox","browserVersion":"108.0.1","moz:accessibilityChecks":false,"moz:buildID":"20221215175817","moz:geckodriverVersion":"0.32.0","moz:headless":false,"moz:platformVersion":"10.0","moz:processID":9304,"moz:profile":"C:\\Users\\STANIS~1\\AppData\\Local\\Temp\\rust_mozprofilehI0moF","_":"11 more keys: [\"moz:shutdownTimeout\",\"moz:useNonSpecCompliantPointerOrigin\",\"moz:webdriverClick\",\"moz:windowless\",\"pageLoadStrategy\",\"platformName\",\"proxy\",\"setWindowRect\",\"strictFileInteractability\",\"timeouts\",\"unhandledPromptBehavior\"]"},"config":{"specs":["./test/specs/**/*.js"],"suites":{},"exclude":[],"logLevel":"error","logLevels":{},"excludeDriverLogs":[],"bail":0,"waitforInterval":500,"waitforTimeout":10000,"framework":"mocha","_":"48 more keys: [\"reporters\",\"services\",\"maxInstances\",\"maxInstancesPerCapability\",\"filesToWatch\",\"connectionRetryTimeout\",\"connectionRetryCount\",\"execArgv\",\"runnerEnv\",\"runner\",\"specFileRetries\",\"specFileRetriesDelay\",\"specFileRetriesDeferred\",\"reporterSyncInterval\",\"reporterSyncTimeout\",\"cucumberFeaturesWithLineNumbers\",\"autoCompileOpts\",\"mochaOpts\",\"jasmineOpts\",\"cucumberOpts\",\"onPrepare\",\"onWorkerStart\",\"onWorkerEnd\",\"before\",\"beforeSession\",\"beforeSuite\",\"beforeHook\",\"beforeTest\",\"beforeCommand\",\"afterCommand\",\"afterTest\",\"afterHook\",\"afterSuite\",\"afterSession\",\"after\",\"onComplete\",\"onReload\",\"beforeFeature\",\"beforeScenario\",\"beforeStep\",\"afterStep\",\"afterScenario\",\"afterFeature\",\"baseUrl\",\"_\",\"$0\",\"config-path\",\"ignoredWorkerServices\"]"}},"isReactElement":false},"x":0,"y":0},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0},{"type":"pause","duration":10},{"type":"pointerDown","button":0},{"type":"pointerUp","button":0}]}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//input[@id='PatientName']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//input[@id='PatientName']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@id='PatientName']"}
+RESULT: {"using":"xpath","value":"//input[@id='PatientName']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/e2b4b8dd-10b6-4c6a-87d0-f1b1241a2df5/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/e2b4b8dd-10b6-4c6a-87d0-f1b1241a2df5/value - {"text":"Adams"}
+RESULT: {"text":"Adams"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/d3623a6c-e008-449a-8187-dc035a8caa8a/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/d3623a6c-e008-449a-8187-dc035a8caa8a/value - {"text":"Schizophrenia"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"text":"Schizophrenia"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/388009c5-c0b1-4226-b21f-0bc172d6a007/displayed - {}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"388009c5-c0b1-4226-b21f-0bc172d6a007","ELEMENT":"388009c5-c0b1-4226-b21f-0bc172d6a007"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"388009c5-c0b1-4226-b21f-0bc172d6a007","ELEMENT":"388009c5-c0b1-4226-b21f-0bc172d6a007"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/388009c5-c0b1-4226-b21f-0bc172d6a007/click - {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="Basic commands patients" timestamp="2023-01-04T09:18:36" time="0.665" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Basic commands patients"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.Basic_commands_patients" name="search patient" time="0.661">
+      <system-out><![CDATA[
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//input[@id='schedule_searchbar']"}
+RESULT: {"using":"xpath","value":"//input[@id='schedule_searchbar']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//span[@id='schedule_searchbutton']"}
+RESULT: {"using":"xpath","value":"//span[@id='schedule_searchbutton']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/e17cd2a4-abfb-4e3f-9c45-32d94e19e11d/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"e17cd2a4-abfb-4e3f-9c45-32d94e19e11d","ELEMENT":"e17cd2a4-abfb-4e3f-9c45-32d94e19e11d"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"e17cd2a4-abfb-4e3f-9c45-32d94e19e11d","ELEMENT":"e17cd2a4-abfb-4e3f-9c45-32d94e19e11d"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/e17cd2a4-abfb-4e3f-9c45-32d94e19e11d/click - {}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/e17cd2a4-abfb-4e3f-9c45-32d94e19e11d/clear - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/e17cd2a4-abfb-4e3f-9c45-32d94e19e11d/value - {"text":"Maud"}
+RESULT: {"text":"Maud"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/e17cd2a4-abfb-4e3f-9c45-32d94e19e11d/value - {"text":" Oliver"}
+RESULT: {"text":" Oliver"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/6fea2b17-8c17-48c4-8c15-c9449ee3b468/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"6fea2b17-8c17-48c4-8c15-c9449ee3b468","ELEMENT":"6fea2b17-8c17-48c4-8c15-c9449ee3b468"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"6fea2b17-8c17-48c4-8c15-c9449ee3b468","ELEMENT":"6fea2b17-8c17-48c4-8c15-c9449ee3b468"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/6fea2b17-8c17-48c4-8c15-c9449ee3b468/click - {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//span[text()='Maud Oliver']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//span[text()='Maud Oliver']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/15f2a0ca-8ac5-4f10-a875-9214edfc4127/displayed - {}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="execute" timestamp="2023-01-04T09:18:36" time="0.091" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="execute"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.execute" name="execute" time="0.087">
+      <system-out><![CDATA[
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"15f2a0ca-8ac5-4f10-a875-9214edfc4127","ELEMENT":"15f2a0ca-8ac5-4f10-a875-9214edfc4127"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard"}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"15f2a0ca-8ac5-4f10-a875-9214edfc4127","ELEMENT":"15f2a0ca-8ac5-4f10-a875-9214edfc4127"}]}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function () {\r\n      const element = document.querySelector(\".clinic-name\");\r\n      element.style.color = \"indigo\";\r\n      element.style.border = \"orange solid 4px\";\r\n    }).apply(null, arguments)","args":[]}
+RESULT: {"script":"return (function () {\r\n      const element = document.querySelector(\".clinic-name\");\r\n      element.style.color = \"indigo\";\r\n      element.style.border = \"orange solid 4px\";\r\n    }).apply(null, arguments)","args":[]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="waitUntil" timestamp="2023-01-04T09:18:36" time="3.175" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="waitUntil"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.waitUntil" name="waitUntil" time="3.168">
+      <system-out><![CDATA[
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/react/demos/progress-bar/semi-circular/"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"url":"https://ej2.syncfusion.com/react/demos/progress-bar/semi-circular/"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"#reLoad"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"css selector","value":"#reLoad"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/eae4f43a-0bf5-48c6-b2b1-6ebe98b04d50/displayed - {}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"eae4f43a-0bf5-48c6-b2b1-6ebe98b04d50","ELEMENT":"eae4f43a-0bf5-48c6-b2b1-6ebe98b04d50"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"eae4f43a-0bf5-48c6-b2b1-6ebe98b04d50","ELEMENT":"eae4f43a-0bf5-48c6-b2b1-6ebe98b04d50"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/eae4f43a-0bf5-48c6-b2b1-6ebe98b04d50/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"#point1"}
+RESULT: {"using":"css selector","value":"#point1"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/46f8c151-ad5d-4f5e-bdaf-e41a68017108/text - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"#point1"}
+RESULT: {"using":"css selector","value":"#point1"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/46f8c151-ad5d-4f5e-bdaf-e41a68017108/text - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"#point1"}
+RESULT: {"using":"css selector","value":"#point1"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/46f8c151-ad5d-4f5e-bdaf-e41a68017108/text - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"#point1"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"using":"css selector","value":"#point1"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/46f8c151-ad5d-4f5e-bdaf-e41a68017108/text - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"#point1"}
+RESULT: {"using":"css selector","value":"#point1"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/46f8c151-ad5d-4f5e-bdaf-e41a68017108/text - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="actions" timestamp="2023-01-04T09:18:40" time="2.441" tests="2" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="actions"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.actions" name="mouse move" time="0.748">
+      <system-out><![CDATA[
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"div.e-responsive-header table[role=grid] tbody tr:first-child"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"using":"css selector","value":"div.e-responsive-header table[role=grid] tbody tr:first-child"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/c0ba74d8-48ff-4468-af5a-3246b6d28cff/rect - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function () {\n        return { scrollX: this.pageXOffset, scrollY: this.pageYOffset };\n    }).apply(null, arguments)","args":[]}
+RESULT: {"script":"return (function () {\n        return { scrollX: this.pageXOffset, scrollY: this.pageYOffset };\n    }).apply(null, arguments)","args":[]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/actions - {"actions":[{"type":"pointer","id":"finger1","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","duration":0,"x":1081,"y":247}]}]}
+RESULT: {"actions":[{"type":"pointer","id":"finger1","parameters":{"pointerType":"mouse"},"actions":[{"type":"pointerMove","duration":0,"x":1081,"y":247}]}]}
+COMMAND: DELETE /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/actions - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"div.e-responsive-header table[role=grid] tbody tr:first-child"}
+RESULT: {"using":"css selector","value":"div.e-responsive-header table[role=grid] tbody tr:first-child"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isFocused(elem) {\n    return elem === document.activeElement;\n}).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"c0ba74d8-48ff-4468-af5a-3246b6d28cff","ELEMENT":"c0ba74d8-48ff-4468-af5a-3246b6d28cff"}]}
+RESULT: {"script":"return (function isFocused(elem) {\n    return elem === document.activeElement;\n}).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"c0ba74d8-48ff-4468-af5a-3246b6d28cff","ELEMENT":"c0ba74d8-48ff-4468-af5a-3246b6d28cff"}]}
+]]></system-out>
+    </testcase>
+    <testcase classname="firefox.108_0_1.windows.actions" name="perform actions" time="1.672">
+      <system-out><![CDATA[
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"[data-date='1596340800000']"}
+RESULT: {"using":"css selector","value":"[data-date='1596340800000']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"[data-date='1596342600000']"}
+RESULT: {"using":"css selector","value":"[data-date='1596342600000']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"css selector","value":"[data-date='1596340800000']"}
+RESULT: {"using":"css selector","value":"[data-date='1596340800000']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1002']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"css selector","value":"[data-date='1596340800000']"}
+RESULT: {"using":"css selector","value":"[data-date='1596340800000']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"[data-date='1596340800000']"}
+RESULT: {"using":"css selector","value":"[data-date='1596340800000']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/dd4b5a38-3581-42f2-8e47-f8fbe2f8597d/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"dd4b5a38-3581-42f2-8e47-f8fbe2f8597d","ELEMENT":"dd4b5a38-3581-42f2-8e47-f8fbe2f8597d"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"dd4b5a38-3581-42f2-8e47-f8fbe2f8597d","ELEMENT":"dd4b5a38-3581-42f2-8e47-f8fbe2f8597d"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/dd4b5a38-3581-42f2-8e47-f8fbe2f8597d/click - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/actions - {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyDown","value":""}]}]}
+RESULT: {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyDown","value":""}]}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"css selector","value":"[data-date='1596342600000']"}
+RESULT: {"using":"css selector","value":"[data-date='1596342600000']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"[data-date='1596342600000']"}
+RESULT: {"using":"css selector","value":"[data-date='1596342600000']"}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/72a61dc0-87fc-4a76-9f31-76d2e1b890c5/displayed - {}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"72a61dc0-87fc-4a76-9f31-76d2e1b890c5","ELEMENT":"72a61dc0-87fc-4a76-9f31-76d2e1b890c5"}]}
+RESULT: {"script":"return (function isElementClickable(elem) {\n    if (!elem.getBoundingClientRect || !elem.scrollIntoView || !elem.contains || !elem.getClientRects || !document.elementFromPoint) {\n        return false; ... (5149 more bytes)","args":[{"element-6066-11e4-a52e-4f735466cecf":"72a61dc0-87fc-4a76-9f31-76d2e1b890c5","ELEMENT":"72a61dc0-87fc-4a76-9f31-76d2e1b890c5"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element/72a61dc0-87fc-4a76-9f31-76d2e1b890c5/click - {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/actions - {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyUp","value":""}]}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {"actions":[{"type":"key","id":"keyboard","actions":[{"type":"keyUp","value":""}]}]}
+COMMAND: DELETE /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/actions - {}
+RESULT: {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+RESULT: {"using":"xpath","value":"//div[@id='Specialist_8']"}
+RESULT: {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"[data-date='1596340800000']"}
+RESULT: {"using":"css selector","value":"[data-date='1596340800000']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/element - {"using":"css selector","value":"[data-date='1596342600000']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isFocused(elem) {\n    return elem === document.activeElement;\n}).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"dd4b5a38-3581-42f2-8e47-f8fbe2f8597d","ELEMENT":"dd4b5a38-3581-42f2-8e47-f8fbe2f8597d"}]}
+RESULT: {"using":"css selector","value":"[data-date='1596342600000']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/execute/sync - {"script":"return (function isFocused(elem) {\n    return elem === document.activeElement;\n}).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"72a61dc0-87fc-4a76-9f31-76d2e1b890c5","ELEMENT":"72a61dc0-87fc-4a76-9f31-76d2e1b890c5"}]}
+RESULT: {"script":"return (function isFocused(elem) {\n    return elem === document.activeElement;\n}).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"dd4b5a38-3581-42f2-8e47-f8fbe2f8597d","ELEMENT":"dd4b5a38-3581-42f2-8e47-f8fbe2f8597d"}]}
+]]></system-out>
+    </testcase>
+  </testsuite>
+  <testsuite name="cookies" timestamp="2023-01-04T09:18:42" time="0.025" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="cookies"/>
+      <property name="capabilities" value="firefox.108_0_1.windows"/>
+      <property name="file" value=".\test\specs\test.spec.js"/>
+    </properties>
+    <testcase classname="firefox.108_0_1.windows.cookies" name="setCookies" time="0.022">
+      <system-out><![CDATA[
+RESULT: {"script":"return (function isFocused(elem) {\n    return elem === document.activeElement;\n}).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"72a61dc0-87fc-4a76-9f31-76d2e1b890c5","ELEMENT":"72a61dc0-87fc-4a76-9f31-76d2e1b890c5"}]}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/url - {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"}
+RESULT: {"url":"https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/cookie - {"cookie":{"name":"helloIamTheCookie","value":"69"}}
+RESULT: {"cookie":{"name":"helloIamTheCookie","value":"69"}}
+COMMAND: GET /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/cookie - {}
+RESULT: {}
+COMMAND: DELETE /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6 - {}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@data-id='Appointment_1030']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//div[@id='Specialist_8']"}
+COMMAND: POST /session/6eb38d15-83ad-411e-961c-d84ed52fd2e6/elements - {"using":"xpath","value":"//h1[@style='color: indigo; border: 4px solid orange']"}
+RESULT: {}
+]]></system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
