@@ -8,6 +8,10 @@ class PatientsHeaderComponent extends BaseComponent {
   get addNewPatientButton() {
     return this.rootEl.$("//button[text()='Add New Patient']");
   }
+
+  get searchPatient() {
+    return this.rootEl.$("//input[@id='schedule_searchbar']");
+  }
 }
 
 module.exports = PatientsHeaderComponent;
