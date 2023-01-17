@@ -1,10 +1,10 @@
 const BasePage = require("./base.page");
-const { PatientsListHeader, AddPatientModal } = require("../components");
+const { PatientsListHeader, AddPatientsModal } = require("../components");
 
 class PatientsPage extends BasePage {
   constructor() {
     super("/showcase/angular/appointmentplanner/#/patients");
-    this.addPatientModal = new AddPatientModal();
+    this.addPatientsModal = new AddPatientsModal();
     this.patientsListHeader = new PatientsListHeader();
   }
 }
