@@ -14,6 +14,6 @@ module.exports = {
   AddDoctorModal,
   DoctorListHeader,
   SpecialistCard,
-  PatientListHeader,
+  PatientsListHeader,
   AddPatientsModal,
 };

@@ -15,7 +15,7 @@ class AddPatientComponent extends BaseComponent {
   input(name) {
     const selectors = {
       name: "//input[@name='Name']",
-      phone: "//input[@id='PatientMobile",
+      phone: "input#PatientMobile",
       email: "//input[@name='Email']",
     };
 

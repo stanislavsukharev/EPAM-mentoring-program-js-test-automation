@@ -18,7 +18,7 @@ describe("Patients test suite", () => {
   });
 
   it("add new patient", async () => {
-    await page("patients").patientsListHeader.addNewPatientBtn.click();
+    await page("patients").patientsListHeader.addNewPatientButton.click();
     await page("patients")
       .addPatientsModal.input("name")
       .setValue("Mister Twister");

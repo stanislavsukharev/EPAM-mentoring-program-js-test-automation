@@ -16,3 +16,5 @@ class DoctorsPage extends BasePage {
     return new SpecialistCard(id);
   }
 }
+
+module.exports = DoctorsPage;
