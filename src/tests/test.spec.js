@@ -1,8 +1,8 @@
+const { page } = require("../po");
+
 describe("Patients test suite", () => {
   beforeEach(async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"
-    );
+    await page("patients").open();
   });
 
   it("search patient", async () => {
@@ -18,30 +18,25 @@ describe("Patients test suite", () => {
   });
 
   it("add new patient", async () => {
-    const addNewPatientButton = await $("//button[text()='Add New Patient']");
-    const inputPatientName = await $("//input[@name='Name']");
-    const inputMobileNumber = await $("//input[@id='PatientMobile']");
-    const inputEmail = await $("//input[@name='Email']");
-    const saveButton = await $("//button[text()='Save']");
-
-    await addNewPatientButton.customClick();
-    await inputPatientName.customClick();
-    await inputPatientName.setValue("Mister Twister");
-    await inputMobileNumber.customClick();
-    await inputMobileNumber.setValue("(333) 333-3333");
-    await inputEmail.setValue("mister@twister.com");
-    await saveButton.customClick();
-
-    const newEntryValidation = await $("//span[text()='Mister Twister']");
-    expect(await newEntryValidation).toBeClickable();
+    await page("patients").patientsListHeader.addNewPatientBtn.click();
+    await page("patients")
+      .addPatientsModal.input("name")
+      .setValue("Mister Twister");
+    await page("patients")
+      .addPatientsModal.input("phone")
+      .setValue("(333) 333-3333");
+    await page("patients")
+      .addPatientsModal.input("email")
+      .setValue("mister@twister.com");
+    await page("patients").addPatientsModal.saveButton.click();
+    await expect(page("patients").addPatientsModal.rootEl).not.toBeDisplayed();
   });
 });
 
 describe("Calendar appointment test", () => {
   it("add appointment", async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"
-    );
+    await page("schedule").open();
+
     const appointment = await $('[data-date="1596340800000"]');
     const inputPatientName = await $("//input[@id='PatientName']");
     const symptomField = await $("//textarea[@name='Symptoms']");
@@ -61,9 +56,8 @@ describe("Calendar appointment test", () => {
 
 describe("Doctors test", () => {
   it("delete doctors entry", async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"
-    );
+    await page("doctors").open();
+
     const doctorsEntry = await $("//div[@id='Specialist_7']");
     const deleteDoctorButton = await $("//button[text()='Delete']");
     const deleteDoctorButtonOk = await $("//button[text()='Ok']");
@@ -81,9 +75,8 @@ describe("Doctors test", () => {
 //TASK2 - Basic commands
 describe("Basic commands doctors", () => {
   it("add new doctor", async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"
-    );
+    await page("doctors").open();
+
     const addNewDoctorButton = await $("//button[text()='Add New Doctor']");
     const addNewDoctorModalWindow = await $(".new-doctor-dialog");
     const inputDoctorName = await $("//input[@name='Name']");
@@ -105,9 +98,7 @@ describe("Basic commands doctors", () => {
 
 describe("Basic commands calendar", () => {
   beforeEach(async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"
-    );
+    await page("schedule").open();
   });
 
   it("delete appointment", async () => {
@@ -145,9 +136,8 @@ describe("Basic commands calendar", () => {
 
 describe("Basic commands patients", () => {
   it("search patient", async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"
-    );
+    await page("patients").open();
+
     const searchPatient = await $("//input[@id='schedule_searchbar']");
     const magnifyingGlass = await $("//span[@id='schedule_searchbutton']");
 
@@ -163,9 +153,8 @@ describe("Basic commands patients", () => {
 // TASK3 - Advanced commands
 describe("adding css style", () => {
   it("execute()", async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/dashboard"
-    );
+    await page("dashboard").open();
+
     await browser.execute(function () {
       const element = document.querySelector(".clinic-name");
       element.style.color = "indigo";
@@ -180,9 +169,8 @@ describe("adding css style", () => {
 
 describe("progress bar semi circular", () => {
   it("waitUntil()", async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/react/demos/progress-bar/semi-circular/"
-    );
+    await page("semi").open();
+
     await $("#reLoad").customClick();
     await browser.waitUntil(
       async () => (await $("#point1").getText()) === "100%",
@@ -199,9 +187,8 @@ describe("progress bar semi circular", () => {
 
 describe("actions", () => {
   it("mouse move", async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/patients"
-    );
+    await page("patients").open();
+
     const firstRow = await $(
       "div.e-responsive-header table[role=grid] tbody tr:first-child"
     );
@@ -214,9 +201,8 @@ describe("actions", () => {
   });
 
   it("selecting multiple cells", async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/calendar"
-    );
+    await page("schedule").open();
+
     const slot1 = await $("[data-date='1596340800000']");
     const slot2 = await $("[data-date='1596342600000']");
     const SHIFT = "\uE008";
@@ -259,9 +245,8 @@ describe("actions", () => {
 //bonus task
 describe("set cookies", () => {
   it("setCookies()", async () => {
-    await browser.url(
-      "https://ej2.syncfusion.com/showcase/angular/appointmentplanner/#/doctors"
-    );
+    await page("doctors").open();
+
     await browser.setCookies([
       {
         name: "helloIamTheCookie",
