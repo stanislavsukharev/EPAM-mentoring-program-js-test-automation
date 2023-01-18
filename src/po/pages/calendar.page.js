@@ -1,19 +1,18 @@
 const BasePage = require("./base.page");
 const {
-  AddDoctorModal,
-  DoctorListHeader,
-  SpecialistCard,
+  AddAppointmentModal,
+  AddNewAppointment,
+  DeleteAppointmentModal,
+  DeleteConfirmationComponent,
 } = require("../components");
 
 class CalendarPage extends BasePage {
   constructor() {
     super("/showcase/angular/appointmentplanner/#/calendar");
-    this.addDoctorModal = new AddDoctorModal();
-    this.doctorListHeader = new DoctorListHeader();
-  }
-
-  specialistCard(id) {
-    return new SpecialistCard(id);
+    this.addNewAppointment = new AddNewAppointment();
+    this.addAppointmentModal = new AddAppointmentModal();
+    this.deleteAppointmentModal = new DeleteAppointmentModal();
+    this.deleteConfirmationComponent = new DeleteConfirmationComponent();
   }
 }
 

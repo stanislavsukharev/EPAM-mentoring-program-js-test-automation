@@ -3,10 +3,11 @@ const DashboardPage = require("./dashboard.page");
 const DoctorsPage = require("./doctors.page");
 const PatientsPage = require("./patients.page");
 const SemiPage = require("./semi-circular.page");
+const DoctorsDetailsPage = require("./doctors-details.page");
 
 /**
- * @param name {'dashboard' | 'doctors' | 'patients' | 'schedule' | 'semi'}
- * @returns {DashboardPage|DoctorsPage|PatientsPage|CalendarPage|SemiPage}
+ * @param name {'dashboard' | 'doctors' | 'patients' | 'schedule' | 'semi' | 'doctorsdetails'}
+ * @returns {DashboardPage|DoctorsPage|PatientsPage|CalendarPage|SemiPage|DoctorsDetailsPage}
  */
 function page(name) {
   const items = {
@@ -15,6 +16,7 @@ function page(name) {
     patients: new PatientsPage(),
     schedule: new CalendarPage(),
     semi: new SemiPage(),
+    doctorsdetails: new DoctorsDetailsPage(),
   };
   return items[name.toLowerCase()];
 }
@@ -25,5 +27,6 @@ module.exports = {
   PatientsPage,
   CalendarPage,
   SemiPage,
+  DoctorsDetailsPage,
   page,
 };

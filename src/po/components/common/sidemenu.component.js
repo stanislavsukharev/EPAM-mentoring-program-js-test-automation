@@ -10,7 +10,7 @@ class SideMenuComponent extends BaseComponent {
   }
 
   /**
-   * @param name {'dashboard' | 'schedule' | 'doctors' | 'patients' | 'semi' }
+   * @param name {'dashboard' | 'schedule' | 'doctors' | 'patients' | 'semi' | 'docdetails'}
    */
   item(name) {
     const selectors = {
@@ -19,6 +19,7 @@ class SideMenuComponent extends BaseComponent {
       doctors: '[routerlink="/doctors"]',
       patients: '[routerlink="/patients"]',
       semi: '[routerlink="/semi-circular"]',
+      docdetails: '[routerlink="/docdetails"]',
     };
     return this.rootEl.$(selectors[name.toLowerCase()]);
   }
