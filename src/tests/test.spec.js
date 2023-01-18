@@ -10,10 +10,6 @@ describe("Patients test suite", () => {
     await page("patients").patientsListHeader.searchPatient.setValue("Mercy");
 
     expect(page("patients")).toHaveValue("mercy60@sample.com");
-
-    // await expect(
-    //   page("patients").patientsListHeader.patientNameValidation
-    // ).toBeClickable();
   });
 
   it("add new patient", async () => {
