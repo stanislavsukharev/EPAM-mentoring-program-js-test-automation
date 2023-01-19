@@ -6,9 +6,7 @@ class DeleteConfirmationComponent extends BaseComponent {
   }
 
   get deleteBtnConfirmation() {
-    return this.rootEl.$(
-      "button[class*='e-quick-dialog-delete']"
-    );
+    return this.rootEl.$("button[class*='e-quick-dialog-delete']");
   }
 }
 

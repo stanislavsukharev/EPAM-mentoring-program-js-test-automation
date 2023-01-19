@@ -1,5 +1,5 @@
 const BasePage = require("./base.page");
-const { PatientsListHeader, AddPatientsModal, SearchPatient } = require("../components");
+const { PatientsListHeader, AddPatientsModal, SearchPatient, PatientsWrapper } = require("../components");
 
 class PatientsPage extends BasePage {
   constructor() {
@@ -7,6 +7,7 @@ class PatientsPage extends BasePage {
     this.addPatientsModal = new AddPatientsModal();
     this.patientsListHeader = new PatientsListHeader();
     this.searchPatient = new SearchPatient();
+    this.patientsWrapper = new PatientsWrapper();
   }
 }
 

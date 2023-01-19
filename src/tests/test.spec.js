@@ -137,19 +137,15 @@ describe("adding css style", () => {
       element.style.color = "indigo";
       element.style.border = "orange solid 4px";
     });
-
-    const newElementValidation = await $(
-      "//h1[@style='color: indigo; border: 4px solid orange']"
-    );
-    expect(await newElementValidation).toExist();
+    await expect(
+      page("dashboard").dashMain.newElementValidation.toExist());
   });
 });
 
 describe("progress bar semi circular", () => {
   it("waitUntil()", async () => {
     await page("semi").open();
-
-    await $("#reLoad").customClick();
+    await page("semi").progressBar.reLoad.customClick();
     await browser.waitUntil(
       async () => (await $("#point1").getText()) === "100%",
       {
@@ -166,25 +162,15 @@ describe("progress bar semi circular", () => {
 describe("actions", () => {
   it("mouse move", async () => {
     await page("patients").open();
-
-    const firstRow = await $(
-      "div.e-responsive-header table[role=grid] tbody tr:first-child"
-    );
-    await firstRow.moveTo();
-
-    const focusValidation = await $(
-      "div.e-responsive-header table[role=grid] tbody tr:first-child"
-    );
-    expect(await focusValidation.isFocused());
+    await page("patients").patientsWrapper.firstRow.moveTo();
+    await expect(page("patients").patientsWrapper.firstRow.isFocused());
   });
 
   it("selecting multiple cells", async () => {
     await page("schedule").open();
 
-    const slot1 = await $("[data-date='1596340800000']");
-    const slot2 = await $("[data-date='1596342600000']");
     const SHIFT = "\uE008";
-    await slot1.customClick();
+    await page("schedule").addNewAppointment.slot1.customClick();
     await browser.performActions([
       {
         type: "key",
@@ -197,7 +183,7 @@ describe("actions", () => {
         ],
       },
     ]);
-    await slot2.customClick();
+    await page("schedule").addNewAppointment.slot2.customClick();
     await browser.pause(500);
     await browser.performActions([
       {
@@ -212,12 +198,9 @@ describe("actions", () => {
       },
     ]);
     await browser.releaseActions();
-
-    const slotValidationFirst = await $("[data-date='1596340800000']");
-    expect(slotValidationFirst.isFocused());
-    const slotValidationLast = await $("[data-date='1596342600000']");
-    expect(slotValidationLast.isFocused());
-  });
+    await expect(page("schedule").addNewAppointment.slotValidationFirst.isFocused());
+    await expect(page("schedule").addNewAppointment.slotValidationLast.isFocused());
+   });
 });
 
 //bonus task

@@ -20,6 +20,10 @@ class PatientsHeaderComponent extends BaseComponent {
   get patientNewValidation() {
     return this.rootEl.$("//span[text()='Mercy']");
   }
+
+  get firstRow() {
+    return this.rootEl.$("div.e-responsive-header table[role=grid] tbody tr:first-child");
+  }
 }
 
 module.exports = PatientsHeaderComponent;

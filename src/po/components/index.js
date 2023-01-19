@@ -17,6 +17,12 @@ const AddAppointmentModal = require("./calendar/add-appointment-modal.component"
 const DeleteAppointmentModal = require("./calendar/delete-appointment-modal.component");
 const DeleteConfirmation = require("./calendar/confirmation-delete-modal.component");
 
+const ProgressBar = require("./semi/semi.component");
+
+const DashMain = require("./dashboard/dashboard.component");
+
+const PatientsWrapper = require("./patients/patients-wrapper.component");
+
 module.exports = {
   Header,
   SideMenu,
@@ -32,4 +38,7 @@ module.exports = {
   DoctorsDetailsHeader,
   DeleteAppointmentModal,
   DeleteConfirmation,
+  ProgressBar,
+  DashMain,
+  PatientsWrapper,
 };
