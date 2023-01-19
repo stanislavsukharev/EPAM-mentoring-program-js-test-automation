@@ -1,10 +1,5 @@
 const BasePage = require("./base.page");
-const {
-  AddAppointmentModal,
-  AddNewAppointment,
-  DeleteAppointmentModal,
-  DeleteConfirmationComponent,
-} = require("../components");
+const { AddAppointmentModal, AddNewAppointment, DeleteAppointmentModal, DeleteConfirmation } = require("../components");
 
 class CalendarPage extends BasePage {
   constructor() {
@@ -12,7 +7,7 @@ class CalendarPage extends BasePage {
     this.addNewAppointment = new AddNewAppointment();
     this.addAppointmentModal = new AddAppointmentModal();
     this.deleteAppointmentModal = new DeleteAppointmentModal();
-    this.deleteConfirmationComponent = new DeleteConfirmationComponent();
+    this.deleteConfirmation = new DeleteConfirmation();
   }
 }
 

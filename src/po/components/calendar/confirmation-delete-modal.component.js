@@ -7,7 +7,7 @@ class DeleteConfirmationComponent extends BaseComponent {
 
   get deleteBtnConfirmation() {
     return this.rootEl.$(
-      ".e-footer-content button.e-control.e-btn.e-lib.e-quick-alertok.e-flat.e-primary.e-quick-dialog-delete"
+      "button[class*='e-quick-dialog-delete']"
     );
   }
 }

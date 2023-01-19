@@ -17,10 +17,8 @@ class PatientsHeaderComponent extends BaseComponent {
     return this.rootEl.$("//span[text()='Maud Oliver']");
   }
 
-  get patientNameValidation() {
-    return this.rootEl.$(
-      ".e-rowcell.e-templatecell.e-selectionbackground.e-active.e-focus .patient-name"
-    );
+  get patientNewValidation() {
+    return this.rootEl.$("//span[text()='Mercy']");
   }
 }
 

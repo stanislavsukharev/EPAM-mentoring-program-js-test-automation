@@ -15,7 +15,7 @@ const SearchPatient = require("./patients/search-patient.component");
 const AddNewAppointment = require("./calendar/new-appointment.component");
 const AddAppointmentModal = require("./calendar/add-appointment-modal.component");
 const DeleteAppointmentModal = require("./calendar/delete-appointment-modal.component");
-const DeleteConfirmationComponent = require("./calendar/confirmation-delete-modal.component");
+const DeleteConfirmation = require("./calendar/confirmation-delete-modal.component");
 
 module.exports = {
   Header,
@@ -31,5 +31,5 @@ module.exports = {
   DeleteDoctorModal,
   DoctorsDetailsHeader,
   DeleteAppointmentModal,
-  DeleteConfirmationComponent,
+  DeleteConfirmation,
 };

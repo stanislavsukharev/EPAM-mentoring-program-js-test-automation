@@ -9,7 +9,9 @@ describe("Patients test suite", () => {
     await page("patients").patientsListHeader.searchPatient.customClick();
     await page("patients").patientsListHeader.searchPatient.setValue("Mercy");
 
-    expect(page("patients")).toHaveValue("mercy60@sample.com");
+    await expect(
+      page("patients").patientsListHeader.patientNewValidation
+    ).toBeClickable();
   });
 
   it("add new patient", async () => {
@@ -106,7 +108,7 @@ describe("Basic commands calendar", () => {
       "schedule"
     ).deleteAppointmentModal.deleteBtnConfirmation.customClick();
     await expect(
-      page("schedule").addNewAppointment.deletedAppointmentValidation
+      page("schedule").addNewAppointment.appointmentDelete
     ).not.toBeDisplayed();
   });
 });

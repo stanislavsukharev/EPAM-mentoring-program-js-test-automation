@@ -1,9 +1,5 @@
 const BasePage = require("./base.page");
-const {
-  PatientsListHeader,
-  AddPatientsModal,
-  SearchPatient,
-} = require("../components");
+const { PatientsListHeader, AddPatientsModal, SearchPatient } = require("../components");
 
 class PatientsPage extends BasePage {
   constructor() {

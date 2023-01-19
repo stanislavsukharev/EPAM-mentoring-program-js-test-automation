@@ -16,10 +16,6 @@ class NewAppointmentComponent extends BaseComponent {
   get newAppointmentValidation() {
     return this.rootEl.$("//div[@data-id='Appointment_1092']");
   }
-
-  get deletedAppointmentValidation() {
-    return this.rootEl.$("//div[@data-id='Appointment_1002']");
-  }
 }
 
 module.exports = NewAppointmentComponent;

@@ -7,7 +7,8 @@ class DeleteAppointmentComponent extends BaseComponent {
 
   get deleteBtn() {
     return this.rootEl.$(
-      ".e-footer-content button.e-control.e-btn.e-lib.e-event-delete.e-flat"
+      "button[class*='e-event-delete']"
+      
     );
   }
 

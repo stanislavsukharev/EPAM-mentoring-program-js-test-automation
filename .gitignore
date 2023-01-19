@@ -3,5 +3,4 @@ coverage/
 allure-report/
 allure-results/
 junit-report/
-src/tests/po.test.js
 artifacts/
