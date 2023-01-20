@@ -128,11 +128,9 @@ describe("Basic commands patients", () => {
   });
 });
 
-// TASK3 - Advanced commands
 describe("adding css style", () => {
   it("execute()", async () => {
     await page("dashboard").open();
-
     await setStyle("indigo", "4px solid orange");
   });
 });
@@ -198,7 +196,6 @@ describe("actions", () => {
    });
 });
 
-//bonus task
 describe("set cookies", () => {
   it("setCookies()", async () => {
     await page("doctors").open();
