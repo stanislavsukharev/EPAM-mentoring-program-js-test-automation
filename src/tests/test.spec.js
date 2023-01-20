@@ -1,4 +1,5 @@
 const { page } = require("../po");
+const { setStyle } = require("../utils/set-style");
 
 describe("Patients test suite", () => {
   beforeEach(async () => {
@@ -132,13 +133,7 @@ describe("adding css style", () => {
   it("execute()", async () => {
     await page("dashboard").open();
 
-    await browser.execute(function () {
-      const element = document.querySelector(".clinic-name");
-      element.style.color = "indigo";
-      element.style.border = "orange solid 4px";
-    });
-    await expect(
-      page("dashboard").dashMain.newElementValidation.toExist());
+    await setStyle("indigo", "4px solid orange");
   });
 });
 
