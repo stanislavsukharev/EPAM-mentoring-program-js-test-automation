@@ -9,10 +9,11 @@ Then the patient entry should be displayed
 @2
 Scenario: As a user I should be able to add a new patient
 Given I open "Patients" page
-When I click add new patient button from list header
+When I click on the add new patient button from list header
 When I type <name> in the name field
 When I type <phone> in the phone field
 When I type <email> in the email field
+When I click on the save button
 Then new patient modal window should not be displayed
 
 Examples:

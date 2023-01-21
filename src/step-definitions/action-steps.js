@@ -11,7 +11,7 @@ When('I type the name', function() {
 });
 
 //@2
-When('I click add new patient button from list header', function() {
+When('I click on the add new patient button from list header', function() {
   return page("patients").patientsListHeader.addNewPatientButton.click();
 });
 
@@ -19,7 +19,7 @@ When('I type <name> in the name field', function() {
   return page("patients").addPatientsModal.input('name').setValue('<name>');
 });
 
-When('I click save button', function() {
+When('I click on the save button', function() {
   return page("patients").addPatientsModal.saveButton.click();
 });
 
