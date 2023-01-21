@@ -4,7 +4,7 @@
   "description": "Automated Testing Mentoring with JS: Basic",
   "main": "index.js",
   "scripts": {
-    "wdio": "wdio run wdio.conf.js"
+    "wdio": "wdio run ./src/configs/wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -14,12 +14,11 @@
   "author": "Stanislav_Sukharev@epam.com",
   "license": "ISC",
   "devDependencies": {
-    "@wdio/allure-reporter": "^7.0.0",
-    "@wdio/cli": "^7.27.0",
-    "@wdio/junit-reporter": "^7.0.0",
-    "@wdio/local-runner": "^7.27.0",
+    "@wdio/cli": "^8.2.1",
+    "@wdio/cucumber-framework": "^8.2.0",
+    "@wdio/local-runner": "^8.2.1",
     "@wdio/mocha-framework": "^7.26.0",
-    "@wdio/spec-reporter": "^7.26.0",
+    "@wdio/spec-reporter": "^8.1.2",
     "chromedriver": "^109.0.0",
     "eslint": "^8.31.0",
     "eslint-config-google": "^0.14.0",
@@ -29,6 +28,7 @@
     "wdio-geckodriver-service": "^4.0.0"
   },
   "dependencies": {
-    "allure-commandline": "^2.20.1"
+    
+    "wdio": "^6.0.1"
   }
 }
