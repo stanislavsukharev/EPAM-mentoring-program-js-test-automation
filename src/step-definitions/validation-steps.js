@@ -3,10 +3,10 @@ const { page } = require('../po');
 
 //@1
 Then('the patient entry should be displayed', function() {
-  return page("patients").patientsListHeader.patientNewValidation.isDisplayed();
+  return expect(page("patients").patientsListHeader.patientNewValidation).toBeClickable();
 });
 
 //@2
-Then('new patient modal window should be displayed', function() {
-  return page("patients").addPatientsModal.rootEl.not.toBeDisplayed();
+Then('the new patient entry should be displayed', function() { 
+  return expect(page("patients").patientsListHeader.patientOutlineValidation).toBeDisplayed();
 });

@@ -24,6 +24,10 @@ class PatientsHeaderComponent extends BaseComponent {
   get firstRow() {
     return this.rootEl.$("div.e-responsive-header table[role=grid] tbody tr:first-child");
   }
+
+  get patientOutlineValidation() {
+    return this.rootEl.$("//span[contains(text(),'Pios')]");
+  }  
 }
 
 module.exports = PatientsHeaderComponent;
