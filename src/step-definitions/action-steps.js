@@ -6,8 +6,8 @@ Given('I open {string} page', function(pageName) {
 });
 
 //@1
-When('I type the name', function() {
-  return page("patients").patientsListHeader.searchPatient.setValue("Mercy");
+When('I type {string} in the search field', function(name) {
+  return page("patients").patientsListHeader.searchPatient.setValue(name);
 });
 
 //@2
