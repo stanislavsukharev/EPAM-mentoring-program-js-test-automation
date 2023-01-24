@@ -11,11 +11,13 @@ const sendRequest = async (url, data = null, method = "get") => {
     });
     return {
       status: response.status,
-      data: response.data
+      data: response.data,
+      statusText: response.statusText
     };
   } catch (error) {
     return {
       status: error.response.status,
+      statusText: error.response.statusText,
       response: error.response
     };
   }
@@ -24,3 +26,4 @@ const sendRequest = async (url, data = null, method = "get") => {
 module.exports = {
   sendRequest
 };
+

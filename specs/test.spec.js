@@ -35,7 +35,6 @@ describe("API Test Suite positive", () => {
     expect(response.status).to.equal(200);
     expect(response.data.title).to.equal("foo(modified)");
     expect(response.data.body).to.equal("bar(modified)");
-    
   });
 
   it("DELETE - resource should be deleted", async () => {
@@ -50,30 +49,36 @@ describe("API Test Suite negative", () => {
   it("should not GET all resources with a typo in endpoint", async () => {
     const response = await sendRequest("pots");
     expect(response.status).to.equal(404);
+    expect(response.statusText).to.equal('Not Found');
   });
   
   it("should not GET resource with non-existent id", async () => {
     const response = await sendRequest("posts/0");
     expect(response.status).to.equal(404);
+    expect(response.statusText).to.equal('Not Found');
   });
 
   it("should not GET filtered resources with wrong parametres", async () => {
     const response = await sendRequest("postsuserId=5");
     expect(response.status).to.equal(404);
+    expect(response.statusText).to.equal('Not Found');
   });
 
   it("POST - should receive error 404 when post with wrong endpoint", async () => {
     const response = await sendRequest("pos1s", testData, "post");
     expect(response.status).to.equal(404);
+    expect(response.statusText).to.equal('Not Found');
   });
 
   it("PUT - resource should not be updated with wrong endpoint", async () => {
     const response = await sendRequest("pots/5", testDataPut, "put");
     expect(response.status).to.equal(404);
+    expect(response.statusText).to.equal('Not Found');
   });
 
   it("DELETE - resource should not be deleted with wrong endpoint", async () => {
-    const response = await sendRequest("post/3", "delete");
+    const response = await sendRequest("post/3", null, "delete");
     expect(response.status).to.equal(404);
+    expect(response.statusText).to.equal('Not Found');
   });
 })
