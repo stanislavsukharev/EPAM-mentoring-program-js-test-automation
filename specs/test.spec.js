@@ -26,16 +26,22 @@ describe("API Test Suite positive", () => {
   it("POST posts", async () => {
     const response = await sendRequest("posts", testData, "post");
     expect(response.status).to.equal(201);
+    expect(response.data.title).to.equal("foo");
+    expect(response.data.body).to.equal("bar");
   });
 
   it("PUT - resource should be updated", async () => {
     const response = await sendRequest("posts/5", testDataPut, "put");
     expect(response.status).to.equal(200);
+    expect(response.data.title).to.equal("foo(modified)");
+    expect(response.data.body).to.equal("bar(modified)");
+    
   });
 
   it("DELETE - resource should be deleted", async () => {
-    const response = await sendRequest("posts/4", "delete");
+    const response = await sendRequest("posts/5", null, "delete");
     expect(response.status).to.equal(200);
+    expect(response.data.body).to.not.equal("bar(modified)");
   });
 })
 
